@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "base";
+@import "variables";
+@import "function";
+@import "classes";
+/**
+ * 全局Reset
+ * 重置Mobile及高级浏览器上常见的差异
+ */
+
+// 1. 将元素的盒模型统一为: border-box
+// 2. 清除元素tap时出现的焦点框
+
+::before,
+::after {
+    @include box-sizing(border-box);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// 1. 默认禁止body滚动
+@include root-scroll;
+
+// 1. 隐藏页面滚动条
+::-webkit-scrollbar {
+    @if map-get($setting, is-scrollbar) == false {
+        display: none;
+    }
+}

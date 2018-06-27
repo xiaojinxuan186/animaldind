@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/publish/publish",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#03BBD5",
+    "navigationBarTitleText": "宠物交易平台",
+    "navigationBarTextStyle": "white"
+  }
+}

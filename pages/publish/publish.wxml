@@ -1,0 +1,37 @@
+<view class = "container">
+	<view class = "form">
+		<view class = "inputGroup">
+			<label class = "title">我的地址</label>
+			<view bindtap="selectAddress">
+				<input placeholder="点击选择，要勾选哦~" disabled value = "{{address}}"/>
+			</view>
+		</view>
+		<view class = "inputGroup">
+			<label class = "title">类型</label>
+			<view>
+				<radio-group class="radio-group" bindchange="radioChange">
+				  <label class="radio" wx:for="{{items}}" wx:key = "{{ index }}">
+					<radio value="{{item.type}}" checked="{{type == item.type}}"/><text>{{item.name}}</text>
+				  </label>
+				</radio-group>
+			</view>
+		</view>
+		<view class = "inputGroup">
+			<label class = "title">联系方式</label>
+			<view>
+				<input placeholder="填写您的联系方式" bindinput = "getContact" value = "{{contact}}"/>
+			</view>
+		</view>
+		<view class = "noteGroup">
+			<label class = "title">说明</label>
+			<view>
+				<textarea  placeholder="填写您的具体需求" bindinput = "getMessage" value = "{{message}}"/>
+			</view>
+		</view>
+		
+		
+		<view class = "publishBtn" bindtap = "publishFn">
+			发布信息
+		</view>
+	</view>
+</view>
